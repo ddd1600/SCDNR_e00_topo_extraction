@@ -7,8 +7,11 @@ counties = ["Abbeville", "Lee", "Bamberg", "Laurens", "Newberry", "Charleston", 
 county = ask "which county? type 'list' to list all counties"
 ap counties.sort if county == "list"
 county = ask "which county?" if county == "list"
-root_path="/Users/daviddouglas/Desktop/GIS\ Data\ Archive/_South\ Carolina/DNR/topos"
+root_path="/Users/daviddouglas/Desktop/GISDataArchive/_SouthCarolina/DNR/topos"
 `open "#{root_path}/quad_images/#{county.downcase}.gif"`
+already_for_county = Dir.glob("#{root_path}/shps/#{county.downcase}/*")
+puts "regions already converted for #{county} are:"
+ap already_for_county
 hsh = JSON.parse(File.open("#{root_path}/dnrquads.json").read)
 quad = ask("which quad? (include all spaces, etc)").upcase
 puts "quad: #{quad}"

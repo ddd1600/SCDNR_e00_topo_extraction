@@ -53,8 +53,8 @@ go()
 }
 
 
-alias runtopo='ruby /Users/daviddouglas/Desktop/GIS\ Data\ Archive/_South\ Carolina/DNR/topos/find_and_convert_topo.rb'
-alias opentopo='open /Users/daviddouglas/Desktop/GIS\ Data\ Archive/_South\ Carolina/DNR/topos/shps'
+alias runtopo='ruby /Users/daviddouglas/Desktop/GISDataArchive/_SouthCarolina/DNR/topos/find_and_convert_topo.rb'
+alias opentopo='open /Users/daviddouglas/Desktop/GISDataArchive/_SouthCarolina/DNR/topos/shps'
 topo()
 {
 runtopo
